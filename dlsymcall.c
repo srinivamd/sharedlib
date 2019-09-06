@@ -24,4 +24,6 @@ int main(int argc, char **argv)
     }
     /* call fn */
     (*fn)(sizeof(keys)/sizeof(keys[0]), keys, values);
+
+    return 0;
 }
