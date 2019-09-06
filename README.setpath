@@ -2,4 +2,4 @@
  g++ -fPIC -fvisibility=hidden -shared -Wl,-soname,libsetpath.so.1 -o lib.so/libsetpath.so.1.0.0 setpath/setpath.o
  cd lib.so; ln -s libsetpath.so.1.0.0 libsetpath.so.1; ln -s libsetpath.so.1 libsetpath.so; cd ..
  g++ --std=c++11 dlsymcall.c -o dlsymcall -ldl
- LD_LIBRARY_PATH=lib.so ./dlsymcall lib.so/libsetpath.so
+ ./dlsymcall lib.so/libsetpath.so
